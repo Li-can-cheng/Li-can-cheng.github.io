@@ -15,8 +15,32 @@
     <atom:link href="https://cjliblog.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>银屏之下，龙游四海。</description>
-    <pubDate>Sun, 25 May 2025 02:16:44 GMT</pubDate>
+    <pubDate>Tue, 05 Aug 2025 18:05:31 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>怎么最大化利用cursor pro</title>
+      <link>https://cjliblog.top/2025/08/06/%E6%80%8E%E4%B9%88%E6%9C%80%E5%A4%A7%E5%8C%96%E5%88%A9%E7%94%A8cursor%20pro/</link>
+      <guid>https://cjliblog.top/2025/08/06/%E6%80%8E%E4%B9%88%E6%9C%80%E5%A4%A7%E5%8C%96%E5%88%A9%E7%94%A8cursor%20pro/</guid>
+      <pubDate>Tue, 05 Aug 2025 18:05:31 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h4 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h4&gt;&lt;p&gt;作为吊打市面最好的vibe coding IDE，cursor的白嫖通道逐渐缩窄，淘宝商家也逐渐没招，因为他的计费方式和识别白嫖手段已经在大</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h4 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h4><p>作为吊打市面最好的vibe coding IDE，cursor的白嫖通道逐渐缩窄，淘宝商家也逐渐没招，因为他的计费方式和识别白嫖手段已经在大陆玩家的紧逼下变得异常严苛。特别是免费用户只能auto这一环节直接绝杀。而怎么把一个pro账号用到极致是一门极致哲学。接下来我们探讨以下游戏规则。（省流请划到底部）</p><h4 id="计费规则"><a href="#计费规则" class="headerlink" title="计费规则"></a>计费规则</h4><p>层级森严。众所周知，claude就是最强的。然而max mode和thinking让人摸不着头脑到底怎么选。</p><p>首先我们来看一下max mode的官方解释</p><blockquote><p>某些模型具备使用 Max Mode 的能力，这允许进行更长时间的推理和更大的上下文窗口。虽然大多数编码任务不需要使用 Max Mode，但对于更复杂的查询，尤其是在处理大型文件或代码库时，它会有所帮助。使用 Max Mode 会消耗更多使用量。您可以在您的仪表板上查看所有请求和 token 的分解情况。</p></blockquote><p>这意味着只有我的问题遇到瓶颈的时候才考虑开启这个模式，平时省略即可。</p><p>另外一点是现在的计费模式采用token消耗制，而不是次数制。提问的token价格远小于输出，而输出往往不可控。这时非常有必要确定好agent的工作范围。我们不仅要提供好明确的文件，可修改的范围，以及代码量、风格、字数。尤其重要的是它容易在底部输出一堆解释性文字来说明自己做了什么，而这往往没有看的价值。</p><p>这可以通过写一份rule放到设置里来约束（有人会建议英文，但是如果提问是中文，我认为中文语境会更符合运算逻辑）：</p><figure class="highlight md"><table><tr><td class="code"><pre><span class="line">代码必须简洁、清晰、目的明确，不要冗余实现；</span><br><span class="line">优先使用最少量的代码，在不牺牲可读性和扩展性的前提下完成功能；</span><br><span class="line">尽量用直接的逻辑表达意图，不要绕圈子；</span><br><span class="line">禁止输出任何总结语句，只给出代码；</span><br><span class="line">如果实现某个功能需要注释，就用最少行数、最恰当位置写必要注释；</span><br><span class="line">你的风格目标是：既像高手写的，又让别人能一眼读懂，既追求优雅，也追求实用；</span><br><span class="line">不使用不必要的抽象封装，不写“套路代码”；</span><br></pre></td></tr></table></figure><p>这是我的个人偏好，具体使用可以进行调整。</p><h4 id="tab"><a href="#tab" class="headerlink" title="tab"></a>tab</h4><blockquote><p>专业版（$20&#x2F;月）：主要使用 Tab 且偶尔使用代理的用户</p></blockquote><p>有趣的是，pro的定位是tab，其实可以利用这一点用注释做好上下文工程，然后一键tab代码，这一点是免费的。</p><h4 id="模型选择"><a href="#模型选择" class="headerlink" title="模型选择"></a>模型选择</h4><p>auto是最便宜的，如果是微不足道的任务，就用它。当然效果看脸，如果充值肯定也不是冲着这个来的，建议微不足道直接手搓，重复的机械劳动就直接到各种llm官网询问并复制粘贴一下。</p><p>sonnet系列的价格是一样的，所以可以直接用4。（不考虑Opus，贵飞起来）</p><table><thead><tr><th>Model</th><th>Base Input Tokens</th><th>5m Cache Writes</th><th>1h Cache Writes</th><th>Cache Hits &amp; Refreshes</th><th>Output Tokens</th></tr></thead><tbody><tr><td>Claude Sonnet 4</td><td>$3 &#x2F; MTok</td><td>$3.75 &#x2F; MTok</td><td>$6 &#x2F; MTok</td><td>$0.30 &#x2F; MTok</td><td>$15 &#x2F; MTok</td></tr><tr><td>Claude Sonnet 3.7</td><td>$3 &#x2F; MTok</td><td>$3.75 &#x2F; MTok</td><td>$6 &#x2F; MTok</td><td>$0.30 &#x2F; MTok</td><td>$15 &#x2F; MTok</td></tr></tbody></table><p><a href="https://docs.anthropic.com/zh-CN/docs/about-claude/pricing">https://docs.anthropic.com/zh-CN/docs/about-claude/pricing</a></p><p>不用thinking，一方面它使用2次请求，会消耗较多token。其次，reddit上也有用户认为thinking效果一般。</p><blockquote><p>I tried the thinking version for a few hours and it was absolutely useless. It just made a mess and kept hallucinating. I felt like I was arguing with it more than working with it. I switched back to 3.5 and became productive again.<br>我尝试了思考版本几个小时，它完全没用。它只是制造混乱，不断产生幻觉。我感觉我更像是在和它争论，而不是在配合它工作。我切换回 3.5，重新变得有效率。</p><p>I just started trying 3.7 non-thinking and it appears to be pretty good so far. I asked it to check out a type change and update a test without any context and it traced and read all the right files and fixed the data structure and unittest perfectly.<br>我刚开始尝试 3.7 非思考模式，目前看来效果相当不错。我让它检查类型变更并更新测试，没有任何上下文信息，它正确地追踪并读取了所有相关文件，完美地修复了数据结构和单元测试。</p><p>It sounds like some people are having success with the thinking version but it felt like going backwards a year to me.<br>听起来有些人用思考版本取得了成功，但对我来说感觉像是倒退了一年。</p><p>Thinking doesn’t seem to work in-line yet.<br>思考模式目前似乎还不能在行内工作。</p></blockquote><blockquote><p>usually i use sonnet 3.7 thinking in ‘ask’ mode, i don’t use agent mode, it make question more complex and infinite updating code until i don’t recognize<br>通常我在”询问”模式下使用 sonnet 3.7 思维，我不使用代理模式，它使问题更复杂，并且无限更新代码直到我无法识别</p></blockquote><p><a href="https://www.reddit.com/r/cursor/comments/1ixn6vw/37_vs_37_thinking/">https://www.reddit.com/r/cursor/comments/1ixn6vw/37_vs_37_thinking/</a></p><p>但也并没有那么不堪，体感上其实并没有太大差别，主要还是烧钱。可以在普通模式卡壳的时候使用thingking模型。换句话说，最佳实践应该是按照问题复杂情况递推 sonnet4-&gt;thingking-&gt;max mode。</p><p>还有就是修bug的话，使用gemini-2.5-pro。</p><blockquote><p>Gemini 2.5 pro 在调试方面比 Claude 4 好出几条街。我觉得 Claude 4 在代码生成方面更好，但如果你遇到一些严重的bug，2.5 pro 几乎每次都能解决。</p></blockquote><p><a href="https://www.reddit.com/r/cursor/comments/1kudjm4/i_compared_claude_4_with_gemini_25_pro/?tl=zh-hans">https://www.reddit.com/r/cursor/comments/1kudjm4/i_compared_claude_4_with_gemini_25_pro/?tl=zh-hans</a></p><h4 id="省流"><a href="#省流" class="headerlink" title="省流"></a>省流</h4><p>想要抠抠搜搜地享受满一个月的付费体验。建议大任务用sonnet4，修bug用gemini-2.5-pro，小事情就手改。</p>]]></content:encoded>
+      
+      
+      <category domain="https://cjliblog.top/categories/2025%E5%A4%8F/">2025夏</category>
+      
+      
+      
+      <comments>https://cjliblog.top/2025/08/06/%E6%80%8E%E4%B9%88%E6%9C%80%E5%A4%A7%E5%8C%96%E5%88%A9%E7%94%A8cursor%20pro/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>go的container包解读</title>
@@ -246,31 +270,6 @@
       
       
       <comments>https://cjliblog.top/2024/07/06/golang%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>大注释实时模版</title>
-      <link>https://cjliblog.top/2024/06/09/%E5%A4%A7%E6%B3%A8%E9%87%8A%E5%AE%9E%E6%97%B6%E6%A8%A1%E7%89%88/</link>
-      <guid>https://cjliblog.top/2024/06/09/%E5%A4%A7%E6%B3%A8%E9%87%8A%E5%AE%9E%E6%97%B6%E6%A8%A1%E7%89%88/</guid>
-      <pubDate>Sat, 08 Jun 2024 16:00:00 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;如图：&lt;/p&gt;
-&lt;p&gt;[&lt;img src=&quot;https://raw.githubusercontent.com/Li-can-cheng/Li-can-cheng.github.io/main/img/%E5%A4%A7%E6%B3%A8%E9%87%8A%E5%AE%9E</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>如图：</p><p>[<img src="https://raw.githubusercontent.com/Li-can-cheng/Li-can-cheng.github.io/main/img/%E5%A4%A7%E6%B3%A8%E9%87%8A%E5%AE%9E%E6%97%B6%E6%A8%A1%E7%89%88.jpg" alt="大注释实时模版">]</p>]]></content:encoded>
-      
-      
-      <category domain="https://cjliblog.top/categories/%E8%84%9A%E6%9C%AC/">脚本</category>
-      
-      
-      
-      <comments>https://cjliblog.top/2024/06/09/%E5%A4%A7%E6%B3%A8%E9%87%8A%E5%AE%9E%E6%97%B6%E6%A8%A1%E7%89%88/#disqus_thread</comments>
       
     </item>
     
